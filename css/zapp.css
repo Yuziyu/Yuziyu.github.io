@@ -17,7 +17,6 @@ body {
 	position: relative;
 	top: 50vh;
 	margin-top: -128px;
-	display: none;
 }
 
 .top .top_image img {
@@ -29,10 +28,10 @@ body {
 	background: #fff;
 	border-radius: 10px;
 	display: grid;
-	gap: 10px;
+	gap: 40px;
 	grid-template-columns: 1fr 1fr 1fr;
 
-	width: 90%;
+	width: 84%;
     margin: 30px auto;
     padding: 20px;
 }
