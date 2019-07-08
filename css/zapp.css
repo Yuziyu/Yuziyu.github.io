@@ -1,0 +1,11 @@
+body {
+	background: #000;
+}
+
+.top_logo {
+	text-align: center;	
+	position: relative;
+	top: 50vh;
+	margin-top: -128px;
+	display: none;
+}
