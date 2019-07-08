@@ -1,14 +1,26 @@
 body {
 	background: #171718;
+	color: #fff;
 }
 
 /* 共通タイトル */
 .head_title {
 	font-family: 'Patua One', cursive;
-	font-size: 8rem;
+	font-size: 3rem;
     color: #fff;
     text-align: center;
     margin: 30px auto;
+}
+
+/* 戻る */
+.return {
+	text-align: right;
+	margin-right: 20px;
+}
+.return img {
+	background: #fff;
+    border-radius: 25px;
+	width: 10%;
 }
 
 /* TOP */

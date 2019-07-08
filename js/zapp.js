@@ -28,6 +28,9 @@ $(function() {
 		var token = $("#token").val();
 		var rid	= $("#roomId").val();
 		var mid = $("#message").val();
+		console.log(token);
+		console.log(rid);
+		console.log(mid);
 		$.ajax({
 			url: "https://api.chatwork.com/v2/rooms/" + rid + "/messages/" + mid,
 			headers: {
@@ -35,7 +38,8 @@ $(function() {
 			},
             xhrFields: { withCredentials: true },
 			type: 'GET',
-			json: true
+			dataType: 'jsonp',
+			jsonp: 'callback'
 		}).done(function (data, status, xhr) {
 			if (xhr.status === 200) {
 				// 正常処理
