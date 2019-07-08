@@ -25,9 +25,9 @@ $(function() {
 
 
     $("#send").on("click", function() {
-		var token = "b98fe3fa8747957f4266d2490d1114f7";
-		var rid	= 155304761;
-		var mid = "ぴ";
+		var token = $("#token").val();
+		var rid	= $("#roomId").val();
+		var mid = $("#message").val();
 		$.ajax({
 			url: "https://api.chatwork.com/v2/rooms/" + rid + "/messages/" + mid,
 			headers: {
