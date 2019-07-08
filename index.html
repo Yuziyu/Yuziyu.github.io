@@ -1,0 +1,33 @@
+<!-- index.html -->
+<html>
+<head>
+  <!-- manifest.jsonを呼び出しています -->
+  <link rel="manifest" href="./manifest.json">
+  <link rel="manifest" href="manifest.webmanifest" />
+  <script>
+    // service workerが有効なら、service-worker.js を登録します
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
+   }
+  </script>
+  <title>Hello PWA.</title>
+  <style>
+    body {
+		background: black;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="./icons/icon-256.png" alt="PWA logo" class="image" />
+	<!--
+  <h1>Hello PWA.</h1>
+  <img src="./pwa-logo.svg" alt="PWA logo" class="image" />
+  <a href="p.html">p.html</a>
+	-->
+
+  <script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js"
+    integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA"
+    crossorigin="anonymous"></script>
+</body>
+</html>
