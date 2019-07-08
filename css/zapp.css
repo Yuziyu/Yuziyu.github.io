@@ -1,11 +1,33 @@
 body {
-	background: #000;
+	background: #171718;
 }
 
-.top_logo {
+/* TOP */
+.top .top_logo {
 	text-align: center;	
 	position: relative;
 	top: 50vh;
 	margin-top: -128px;
 	display: none;
+}
+
+/* MENU */
+.menu .icon_list {
+	background: #fff;
+	border-radius: 10px;
+	display: grid;
+	gap: 10px;
+	grid-template-columns: 1fr 1fr 1fr;
+
+	width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.menu .icon_list li {
+	text-align: center;
+}
+
+.menu .icon_list li img {
+	width: 80%;
 }
