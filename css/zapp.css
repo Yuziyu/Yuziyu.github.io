@@ -2,6 +2,15 @@ body {
 	background: #171718;
 }
 
+/* 共通タイトル */
+.head_title {
+	font-family: 'Patua One', cursive;
+	font-size: 8rem;
+    color: #fff;
+    text-align: center;
+    margin: 30px auto;
+}
+
 /* TOP */
 .top .top_logo {
 	text-align: center;	
@@ -9,6 +18,10 @@ body {
 	top: 50vh;
 	margin-top: -128px;
 	display: none;
+}
+
+.top .top_image img {
+	width: 100%;
 }
 
 /* MENU */
