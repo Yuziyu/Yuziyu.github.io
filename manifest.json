@@ -1,7 +1,7 @@
 {
-  "name": "PWA Sample",
-  "short_name": "PWA",
-  "background_color": "#fc980c",
+  "name": "ZAPP",
+  "short_name": "ZAPP",
+  "background_color": "#000",
   "icons": [{
       "src": "icons/icon-256.png",
       "sizes": "256x256",
