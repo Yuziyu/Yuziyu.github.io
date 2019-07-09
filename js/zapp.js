@@ -1,5 +1,7 @@
 $(function() {
 
+	pinchLock();
+
 	// ページ遷移アニメーション
 	$(document).ready(function() {
 		$(".animsition").animsition({
@@ -54,4 +56,28 @@ $(function() {
 			return true;
 		});
 	});
+
+	//
+	//ピンチイン・アウトを抑制
+	//
+	function pinchLock() {
+		/* "passive" が使えるかどうかを検出 */
+		var passiveSupported = false;
+		try {
+			document.addEventListener("test", null, Object.defineProperty({}, "passive", {
+			get: function() {
+				passiveSupported = true;
+			}
+			}));
+		} catch(err) {}
+
+		/* リスナーを登録 */
+		document.addEventListener('touchstart', function listener(e) {
+			e.preventDefault();
+		}, passiveSupported ? { passive: false } : false);
+
+		document.addEventListener('touchmove', function listener(e) {
+			e.preventDefault();
+		}, passiveSupported ? { passive: false } : false);
+	}
 });
