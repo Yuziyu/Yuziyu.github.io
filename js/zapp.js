@@ -71,13 +71,19 @@ $(function() {
 			}));
 		} catch(err) {}
 
-		/* リスナーを登録 */
-		document.addEventListener('touchstart', function listener(e) {
-			e.preventDefault();
-		}, passiveSupported ? { passive: false } : false);
+		/* ピッチインピッチアウトによる拡大縮小を禁止 */
+		document.documentElement.addEventListener('touchstart', function (e) {
+			if (e.touches.length >= 2) {e.preventDefault();}
+		}, {passive: false});
 
-		document.addEventListener('touchmove', function listener(e) {
-			e.preventDefault();
-		}, passiveSupported ? { passive: false } : false);
+		/* ダブルタップによる拡大を禁止 */
+		var t = 0;
+		document.documentElement.addEventListener('touchend', function (e) {
+			var now = new Date().getTime();
+			if ((now - t) < 350){
+				e.preventDefault();
+			}
+			t = now;
+		}, false);
 	}
 });
