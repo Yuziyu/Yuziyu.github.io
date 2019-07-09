@@ -1,30 +1,22 @@
 $(function() {
 
+	// ピンチイン・アウトを抑制
 	pinchLock();
 
 	// ページ遷移アニメーション
-	$(document).ready(function() {
-		$(".animsition").animsition({
-			inClass: 'zoom-in-sm',
-			outClass: 'zoom-out-sm',
-			inDuration: 200,
-			outDuration: 300,
-			linkElement: '.animsition-link',
-			loading: true,
-			loadingParentElement: 'body', //animsition wrapper element
-			loadingClass: 'animsition-loading',
-			loadingInner: '', // e.g '<img src="loading.svg" />'
-			timeout: false,
-			timeoutCountdown: 5000,
-			onLoadEvent: true,
-			browser: [ 'animation-duration', '-webkit-animation-duration'],
-			overlay : false,
-			overlayClass : 'animsition-overlay-slide',
-			overlayParentElement : 'body',
-			transition: function(url){ window.location.href = url; }
-		});
-	});
+	pageAnim();
 
+	// 写真交換
+    $("#changePicture").on("click", function() {
+		var target = $("#changePicture img");
+		target.css("opacity",0);
+		setTimeout(function(){
+			target.attr("src", "./images/picture/pic_"+ Math.floor(Math.random() * Math.floor(6)) +".jpg");
+			setTimeout(function(){
+				target.css("opacity",1);
+			},300);
+		},300);
+	});
 
     $("#send").on("click", function() {
 		var token = $("#token").val();
@@ -57,8 +49,38 @@ $(function() {
 		});
 	});
 
+
+
+
 	//
-	//ピンチイン・アウトを抑制
+	// ページ遷移アニメーション
+	//
+	function pageAnim() {
+		$(document).ready(function() {
+			$(".animsition").animsition({
+				inClass: 'zoom-in-sm',
+				outClass: 'zoom-out-sm',
+				inDuration: 200,
+				outDuration: 300,
+				linkElement: '.animsition-link',
+				loading: true,
+				loadingParentElement: 'body', //animsition wrapper element
+				loadingClass: 'animsition-loading',
+				loadingInner: '', // e.g '<img src="loading.svg" />'
+				timeout: false,
+				timeoutCountdown: 5000,
+				onLoadEvent: true,
+				browser: [ 'animation-duration', '-webkit-animation-duration'],
+				overlay : false,
+				overlayClass : 'animsition-overlay-slide',
+				overlayParentElement : 'body',
+				transition: function(url){ window.location.href = url; }
+			});
+		});
+	}
+
+	//
+	// ピンチイン・アウトを抑制
 	//
 	function pinchLock() {
 		/* "passive" が使えるかどうかを検出 */
