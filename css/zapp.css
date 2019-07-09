@@ -3,6 +3,10 @@ body {
 	color: #fff;
 }
 
+a {
+	color: #fff;
+}
+
 /* 共通タイトル */
 .head_title {
 	font-family: 'Patua One', cursive;
