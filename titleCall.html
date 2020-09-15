@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<!-- プロジェクト用 -->
+		<script src="js/jquery-2.2.4.min.js"></script>
+		<script src="js/animsition.min.js"></script>
+		<script src="js/zapp.js"></script>
+		<script src="js/titleCall.js"></script>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/zapp.css" />
+		<link rel="stylesheet" href="css/animsition.css" />
+		<link rel="stylesheet" href="css/titleCall.css" />
+		<link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
+
+		<meta name="viewport" content="width=device-width">
+
+		<title>ZAPP PWA</title>
+	</head>
+	<body class="title_call animsition">
+		<!-- ネタバレのため一時的に隠し -->
+		<h1 class="head_title"><!--TitleCall--></h1>
+
+		<div id="show" class="show_area"></div>
+
+		<div class="input_area">
+			<div>
+				<input type="image" src="./images/titleCall.svg" class="start_title_call" onclick="showString();">
+				<audio src="./mp3/titleCall/se.mp3" preload="auto"></audio>
+			</div>
+
+			<div class="add_input_area">
+				<dl>
+					<dt>文言設定：</dt>
+					<dd><input type="text" id="strValue"></dd>
+				</dl>
+				<dl>
+					<dt>速度設定：</dt>
+					<dd><input type="text" id="speed"></dd>
+				</dl>
+			</div>
+		</div>
+
+		<nav class="return">
+			<a href="menu.html" class="animsition-link">
+				<img src="./images/return.svg" alt="logo"/>
+			</a>
+		</nav>
+	</body>
+</html>

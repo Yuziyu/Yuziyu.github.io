@@ -1,0 +1,35 @@
+
+.title_call .show_area {
+	padding: 20px;
+}
+.title_call .input_area {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.title_call .add_input_area {
+	display: none;
+	width: 60%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+	background: #5c5c5c;
+	top: 20px;
+    position: relative;
+}
+
+.title_call .add_input_area dl {
+	margin-top: 5px;
+}
+.title_call .add_input_area dl > * {
+	display: inline-block;
+}
+
+.title_call .add_input_area input {
+	width: 300px;
+}
+
+.title_call .start_title_call {
+	width: 50%;
+	max-width: 256px;
+}
