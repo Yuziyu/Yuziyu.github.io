@@ -36,19 +36,22 @@ const showString = async () => {
     elm.style.fontSize = "200px";
 
     // 音とともに一文字ずつ表示
-    for(let i = 0; i < str.length; i++){
-        elm.innerHTML = "";
-        elm.innerHTML = str[i];
-        playSound(SE);
-        
-        // 200ミリ秒待つ
-        await sleep(spd);
-    }
-    // 全文表示
-    elm.innerHTML = str;
-    elm.style.textAlign = "left";
-    elm.style.fontSize = "50px";
-    playSound(BGM)
+	if(str) {
+		for(let i = 0; i < str.length; i++){
+			elm.innerHTML = "";
+			elm.innerHTML = str[i];
+			playSound(SE);
+			
+			// 200ミリ秒待つ
+			await sleep(spd);
+		}
+
+		// 全文表示
+		elm.innerHTML = str;
+		elm.style.textAlign = "left";
+		elm.style.fontSize = "50px";
+		playSound(BGM)
+	}
 
 	$(".input_area").toggle("show");
 	$(".add_input_area").show();
