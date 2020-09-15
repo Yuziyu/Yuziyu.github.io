@@ -33,7 +33,7 @@ const showString = async () => {
 	console.log(str);
 
     elm.style.textAlign = "center";
-    elm.style.fontSize = "200px";
+    elm.style.fontSize = "400px";
 
     // 音とともに一文字ずつ表示
 	if(str) {
